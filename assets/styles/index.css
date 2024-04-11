@@ -4,11 +4,21 @@
   box-sizing: border-box;
 }
 
+body {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  /* text color */
+  color: #3a3a3a;
+}
+
 header {
   background-color: chocolate;
 }
 main {
   background-color: lightblue;
+  /* make the main element to take up 100% of the available space */
+  flex: 1 0 auto;
 }
 footer {
   background-color: lightgreen;
