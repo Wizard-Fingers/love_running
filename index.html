@@ -17,14 +17,12 @@
       sizes="180x180"
       href="assets/favicon/apple-touch-icon.png"
     />
-
     <link
       rel="icon"
       type="image/png"
       sizes="32x32"
       href="assets/favicon/favicon-32x32.png"
     />
-
     <link
       rel="icon"
       type="image/png"
@@ -37,19 +35,25 @@
   </head>
   <body>
     <!-- header -->
-    
-        <a href="/index.html">
-        <h1 id="logo">love running</h1>
-        </a>
-
-        <!-- nav element -->
-        <nav>
+    <header>
+      <a href="/index.html" id="logo">Love Running</a>
+      <nav id="menu">
+        <ul>
+          <li><a href="/index.html" class="active">Home</a></li>
+          <li><a href="/gallery.html">Gallery</a></li>
+          <li><a href="/signUp.html">Sign Up</a></li>
+        </ul>
+      </nav>
+      <div class="mobile-menu">
+        <div class="burger-icon" onclick="toggleMobileMenu(this)">&#9776;</div>
+        <nav id="mobile-menu">
           <ul>
             <li><a href="/index.html">Home</a></li>
             <li><a href="/gallery.html">Gallery</a></li>
             <li><a href="/signUp.html">Sign Up</a></li>
           </ul>
-        
+        </nav>
+      </div>
     </header>
     <!-- main component where the main part of the content of the page is located -->
     <main>
@@ -58,5 +62,13 @@
     </main>
     <!-- footer sits at the bottom of the page that holds secondary information -->
     <footer>footer</footer>
+    <script>
+      function toggleMobileMenu(icon) {
+        var mobileMenu = document.getElementById("mobile-menu");
+        mobileMenu.style.display =
+          mobileMenu.style.display === "block" ? "none" : "block";
+        icon.innerHTML = icon.innerHTML === "&#9776;" ? "&#10005;" : "&#9776;";
+      }
+    </script>
   </body>
 </html>
