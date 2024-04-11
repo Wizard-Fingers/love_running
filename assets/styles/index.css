@@ -48,6 +48,26 @@ footer {
   padding: 1rem;
   text-align: center;
 }
+footer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+  background-color: #f8f9fa;
+}
+
+footer a {
+  color: #3a3a3a;
+  text-decoration: none;
+  font-size: 24px;
+  margin: 0 10px;
+  padding-left: 1.5rem;
+  padding-right: 1.5rem;
+}
+
+footer a:hover {
+  color: #000; /* Change color on hover */
+}
 
 #logo {
   text-decoration: none;
@@ -95,7 +115,7 @@ footer {
 }
 
 .burger-icon {
-  font-size: 1.5rem;
+  font-size: 2rem;
   cursor: pointer;
 }
 
@@ -123,7 +143,8 @@ footer {
   color: #3a3a3a;
   text-decoration: none;
   font-family: "Neucha", cursive;
-  font-size: 1rem;
+  font-size: 1.5rem;
+  font-weight: bold;
   display: block;
   padding: 0.5rem;
   border-radius: 0.5rem;
