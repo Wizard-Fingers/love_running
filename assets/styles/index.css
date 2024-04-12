@@ -2,6 +2,15 @@
 @import url("https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Neucha&family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap");
 
+:root {
+  --blue: #0077b6;
+  --orange: #ff7f00;
+  --green: #4caf50;
+  --white: #fff;
+  --text: #333;
+}
+
+/* Global Styles */
 * {
   padding: 0;
   margin: 0;
@@ -12,7 +21,7 @@ body {
   min-height: 100vh;
   display: flex;
   flex-direction: column;
-  color: #3a3a3a;
+  color: var(--text);
   font-family: "Neucha", cursive;
   font-style: normal;
   font-size: 1rem;
@@ -24,9 +33,9 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
-/* Header styles */
+/* Header Styles */
 header {
-  background-color: #ffffff;
+  background-color: var(--white);
   padding: 1rem;
   position: fixed;
   z-index: 99;
@@ -41,7 +50,177 @@ main {
   flex: 1;
   margin-top: 4rem; /* Adjust the margin-top value to create space below the header */
 }
-/* hero section for the index page */
+
+/* Footer Styles */
+footer {
+  background-color: #f8f9fa;
+  padding: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+footer a {
+  color: var(--text);
+  text-decoration: none;
+  font-size: 24px;
+  margin: 0 10px;
+  padding-left: 1.5rem;
+  padding-right: 1.5rem;
+  transition: color 0.3s ease;
+}
+
+footer a:hover {
+  color: var(--blue);
+}
+
+/* Logo Styles */
+#logo {
+  text-decoration: none;
+  color: var(--text);
+  font-family: "Nunito", sans-serif;
+  font-weight: 700;
+  font-size: 1.5rem;
+}
+
+/* Menu Styles */
+#menu {
+  margin-right: 1rem;
+}
+
+#menu ul {
+  list-style-type: none;
+  padding: 0;
+  display: flex;
+}
+
+#menu li {
+  margin: 0 0.5rem;
+}
+
+#menu li a {
+  text-decoration: none;
+  color: var(--text);
+  padding: 0.5rem 1rem;
+  border-radius: 0.5rem;
+  transition: background-color 0.3s ease-out;
+}
+
+#menu li a:hover {
+  background-color: var(--blue);
+  color: var(--white);
+}
+
+#menu li a.active {
+  background-color: var(--blue);
+  color: var(--white);
+  box-shadow: 0 4px 4px rgba(0, 0, 0, 0.3);
+  font-weight: bold;
+}
+
+/* Mobile Menu Styles */
+.mobile-menu {
+  display: none;
+}
+
+.burger-icon {
+  font-size: 2rem;
+  cursor: pointer;
+  color: var(--text);
+}
+
+#mobile-menu {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  width: 100%;
+  background-color: var(--white);
+  padding: 1rem;
+  box-shadow: 0 4px 4px rgba(0, 0, 0, 0.3);
+}
+
+#mobile-menu ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+#mobile-menu li {
+  margin: 0.5rem 0;
+}
+
+#mobile-menu li a {
+  color: var(--text);
+  text-decoration: none;
+  font-family: "Neucha", cursive;
+  font-size: 1.5rem;
+  font-weight: bold;
+  display: block;
+  padding: 0.5rem;
+  border-radius: 0.5rem;
+  transition: background-color 0.3s ease-out;
+}
+
+#mobile-menu li a:hover {
+  background-color: var(--blue);
+  color: var(--white);
+}
+
+#mobile-menu li a.active {
+  background-color: var(--blue);
+  color: var(--white);
+  box-shadow: 0 4px 4px rgba(0, 0, 0, 0.3);
+  font-weight: bold;
+}
+
+/* Tablet and up Styles */
+@media screen and (min-width: 768px) {
+  #menu {
+    order: 1;
+  }
+
+  #logo {
+    order: 0;
+  }
+
+  #menu ul {
+    justify-content: flex-end;
+  }
+}
+
+/* Mobile Styles */
+@media screen and (max-width: 767px) {
+  #menu {
+    display: none;
+  }
+
+  .mobile-menu {
+    display: flex;
+    align-items: center;
+  }
+}
+
+/* Custom Scroll Bar Styles */
+::-webkit-scrollbar {
+  width: 12px;
+}
+
+::-webkit-scrollbar-track {
+  background-color: #f5f5f5;
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: var(--blue);
+  border-radius: 10px;
+  border: 3px solid #f5f5f5;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background-color: #555;
+}
+
+/* Hero Section Styles */
 #hero {
   height: 600px;
   width: 100%;
@@ -60,7 +239,6 @@ main {
   width: 40%;
   min-height: 200px;
   margin: 0 auto;
-
   border-radius: 1rem;
   margin-left: -15px;
 }
@@ -68,9 +246,10 @@ main {
 #cover-text > h2,
 #cover-text > h3 {
   font-family: "Nunito", sans-serif;
-  color: #3a3a3a;
+  color: var(--text);
   margin: 0.5rem 0;
   font-size: 2.5rem;
+  margin-left: 10px;
 }
 
 /* Media query for smaller screens */
@@ -86,6 +265,8 @@ main {
     font-size: 2rem;
   }
 }
+
+/* Reasons Section Styles */
 #reasons {
   padding: 20px;
   margin-bottom: 20px;
@@ -125,7 +306,7 @@ main {
 }
 
 #benefits hr {
-  border: 1px solid #3a3a3a;
+  border: 1px solid var(--text);
   margin: 5px 0;
 }
 
@@ -149,7 +330,8 @@ main {
     margin-top: 20px;
   }
 }
-/* Meetup times section */
+
+/* Meetup Times Section Styles */
 #meetups {
   padding: 60px 0;
   text-align: center;
@@ -158,8 +340,7 @@ main {
 #meetups h2 {
   font-size: 2.5rem;
   margin-bottom: 30px;
-  color: #3a3a3a;
-  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+  color: var(--text);
 }
 
 #times {
@@ -193,7 +374,7 @@ main {
 .meetup-content h3 {
   font-size: 1.8rem;
   margin-bottom: 15px;
-  color: #333;
+  color: var(--text);
 }
 
 .meetup-content p {
@@ -204,7 +385,7 @@ main {
 .meetup-content p:first-of-type {
   font-size: 1.4rem;
   font-weight: bold;
-  color: #333;
+  color: var(--text);
 }
 
 @media screen and (min-width: 768px) {
@@ -213,172 +394,7 @@ main {
   }
 }
 
-footer {
-  background-color: #f0f0f0;
-  padding: 1rem;
-  text-align: center;
-}
-footer {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  padding: 20px;
-  background-color: #f8f9fa;
-}
-
-footer a {
-  color: #3a3a3a;
-  text-decoration: none;
-  font-size: 24px;
-  margin: 0 10px;
-  padding-left: 1.5rem;
-  padding-right: 1.5rem;
-}
-
-footer a:hover {
-  color: #000; /* Change color on hover */
-}
-
-#logo {
-  text-decoration: none;
-  color: #3a3a3a;
-  font-family: "Nunito", sans-serif;
-  font-weight: 700;
-  font-size: 1.5rem;
-}
-
-#menu {
-  margin-right: 1rem;
-}
-
-#menu ul {
-  list-style-type: none;
-  padding: 0;
-  display: flex;
-}
-
-#menu li {
-  margin: 0 0.5rem;
-}
-
-#menu li a {
-  text-decoration: none;
-  color: #3a3a3a;
-  padding: 0.5rem 1rem;
-  border-radius: 0.5rem;
-  transition: background-color 0.3s ease-out;
-}
-
-#menu li a:hover {
-  background-color: lightblue;
-}
-
-#menu li a.active {
-  background-color: lightblue;
-  box-shadow: 0 4px 4px rgba(0, 0, 0, 0.3);
-  font-weight: bold;
-}
-
-/* Mobile menu styles */
-.mobile-menu {
-  display: none;
-}
-
-.burger-icon {
-  font-size: 2rem;
-  cursor: pointer;
-}
-
-#mobile-menu {
-  display: none;
-  position: absolute;
-  top: 100%;
-  left: 0;
-  width: 100%;
-  background-color: #ffffff;
-  padding: 1rem;
-  box-shadow: 0 4px 4px rgba(0, 0, 0, 0.3);
-}
-
-#mobile-menu ul {
-  list-style-type: none;
-  padding: 0;
-}
-
-#mobile-menu li {
-  margin: 0.5rem 0;
-}
-
-#mobile-menu li a {
-  color: #3a3a3a;
-  text-decoration: none;
-  font-family: "Neucha", cursive;
-  font-size: 1.5rem;
-  font-weight: bold;
-  display: block;
-  padding: 0.5rem;
-  border-radius: 0.5rem;
-  transition: background-color 0.3s ease-out;
-}
-
-#mobile-menu li a:hover {
-  background-color: lightblue;
-}
-
-#mobile-menu li a.active {
-  background-color: lightblue;
-  box-shadow: 0 4px 4px rgba(0, 0, 0, 0.3);
-  font-weight: bold;
-}
-
-/* Tablet and up styles */
-@media screen and (min-width: 768px) {
-  #menu {
-    order: 1;
-  }
-
-  #logo {
-    order: 0;
-  }
-
-  #menu ul {
-    justify-content: flex-end;
-  }
-}
-
-/* Mobile styles */
-@media screen and (max-width: 767px) {
-  #menu {
-    display: none;
-  }
-
-  .mobile-menu {
-    display: flex;
-    align-items: center;
-  }
-}
-/* Custom scroll bar styles */
-::-webkit-scrollbar {
-  width: 12px;
-}
-
-::-webkit-scrollbar-track {
-  background-color: #f5f5f5;
-  border-radius: 10px;
-}
-
-::-webkit-scrollbar-thumb {
-  background-color: #888;
-  border-radius: 10px;
-  border: 3px solid #f5f5f5;
-}
-
-::-webkit-scrollbar-thumb:hover {
-  background-color: #555;
-}
-
-/* gallery styles page */
-
+/* Gallery Styles */
 #gallery {
   padding: 20px;
 }
@@ -405,4 +421,107 @@ footer a:hover {
 
 .grid-item:hover img {
   transform: scale(1.1);
+}
+
+/* Sign Up Section Styles */
+#signup {
+  background-image: url("../images/signup-image.webp");
+  background-size: cover;
+  background-position: center;
+  padding: 100px 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.signup-container {
+  max-width: 500px;
+  width: 90%;
+  margin: 0 auto;
+}
+
+#signup-form-container {
+  background-color: rgba(255, 255, 255, 0.9);
+  padding: 40px;
+  border-radius: 10px;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+#signup-form {
+  color: var(--text);
+}
+
+#signup-form h2 {
+  margin-bottom: 30px;
+  font-size: 2rem;
+  text-align: center;
+  color: var(--green);
+}
+
+.form-group {
+  margin-bottom: 25px;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 8px;
+  font-size: 1.1rem;
+  font-weight: bold;
+  color: var(--blue);
+}
+
+.text-input {
+  width: 100%;
+  padding: 12px;
+  font-size: 1rem;
+  border: 2px solid #ddd;
+  border-radius: 5px;
+  transition: border-color 0.3s;
+}
+
+.text-input:focus {
+  outline: none;
+  border-color: var(--orange);
+}
+
+.radio-buttons {
+  display: flex;
+  justify-content: space-between;
+}
+
+.radio-buttons div {
+  display: flex;
+  align-items: center;
+}
+
+.radio-buttons input {
+  margin-right: 8px;
+}
+
+.radio-buttons label {
+  font-size: 1rem;
+  color: var(--text);
+}
+
+.join-button {
+  display: block;
+  width: 100%;
+  padding: 15px;
+  font-size: 1.1rem;
+  color: var(--white);
+  background-color: var(--green);
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.join-button:hover {
+  background-color: #388e3c;
+}
+
+@media screen and (min-width: 768px) {
+  #signup-form-container {
+    padding: 50px;
+  }
 }
