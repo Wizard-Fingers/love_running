@@ -129,11 +129,15 @@ main {
   width: 90vw;
   margin-bottom: 20px;
   box-shadow: 0 2px 2px rgba(0, 0, 0, 0.3);
-  border-radius: 50% ;
+  border-radius: 50%;
   max-width: 300px;
   max-height: 300px;
 }
 
+#benifits-image {
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 footer {
