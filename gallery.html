@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Love Running gallery page" />
+    <meta name="keywords" content="Love Running" />
+    <meta name="keywords" content="Active" />
+    <meta name="keywords" content="Healthy" />
+    <meta name="keywords" content="Lifestyle" />
+    <meta name="keywords" content="Running" />
+    <meta name="keywords" content="Ireland" />
+    <meta name="keywords" content="Dublin" />
+    <!-- here is the favicons that were given -->
+
+    <link
+      rel="apple-touch-icon"
+      sizes="180x180"
+      href="assets/favicon/apple-touch-icon.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="assets/favicon/favicon-32x32.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="16x16"
+      href="assets/favicon/favicon-16x16.png"
+    />
+    <!-- css -->
+    <link rel="stylesheet" href="assets/styles/index.css" />
+    <title>Love Running - Gallery</title>
+  </head>
+  <body>
+    <!-- header -->
+    <header>
+      <a href="/index.html" id="logo">Love Running</a>
+      <nav id="menu">
+        <ul>
+          <li><a href="/index.html">Home</a></li>
+          <li><a href="/gallery.html" class="active">Gallery</a></li>
+          <li><a href="/signUp.html">Sign Up</a></li>
+        </ul>
+      </nav>
+      <div class="mobile-menu">
+        <div class="burger-icon" onclick="toggleMobileMenu(this)">
+          <i class="fas fa-bars"></i>
+        </div>
+        <nav id="mobile-menu">
+          <ul>
+            <li><a href="/index.html">Home</a></li>
+            <li><a href="/gallery.html" class="active">Gallery</a></li>
+            <li><a href="/signUp.html">Sign Up</a></li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+    <!-- main component where the main part of the content of the page is located -->
+    <main>
+      main
+      <h1>this is a different font</h1>
+    </main>
+    <!-- footer sits at the bottom of the page that holds secondary information -->
+    <footer>
+      <a href="https://www.facebook.com"><i class="fab fa-facebook"></i></a>
+      <a href="https://www.instagram.com"
+        ><i class="fab fa-instagram-square"></i
+      ></a>
+      <a href="https://twitter.com"><i class="fab fa-twitter-square"></i></a>
+      <a href="https://www.youtube.com"><i class="fab fa-youtube"></i></a>
+    </footer>
+    <!-- functionality for the mobile nav -->
+    <script>
+      function toggleMobileMenu(icon) {
+        var mobileMenu = document.getElementById("mobile-menu");
+        mobileMenu.style.display =
+          mobileMenu.style.display === "block" ? "none" : "block";
+        icon.innerHTML = icon.innerHTML === "&#9776;" ? "&#10005;" : "&#9776;";
+      }
+    </script>
+
+    <script
+      src="https://kit.fontawesome.com/90b2794bf8.js"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>
