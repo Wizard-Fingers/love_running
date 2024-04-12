@@ -40,7 +40,12 @@ header {
 main {
   flex: 1;
   margin-top: 4rem; /* Adjust the margin-top value to create space below the header */
-  padding: 1rem;
+}
+/* hero section for the index page */
+#hero {
+  height: 600px;
+  width: 100%;
+  background: url("../images/hero-image.webp") no-repeat center center/cover;
 }
 
 footer {
